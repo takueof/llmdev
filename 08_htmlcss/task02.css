@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.header {
+  background: #84ceef;
+  color: #ffffff;
+}
+
+.main > h1 {
+  color: #e47292;
+  text-align: center;
+}
+
+.footer {
+  background: #040000;
+  color: #ffffff;
+}
