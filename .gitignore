@@ -3,3 +3,4 @@
 .LSOverride
 .ipynb_checkpoints
 Thumbs.db
+__pycache__
