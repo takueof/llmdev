@@ -3,7 +3,9 @@ name = "llmdev"
 version = "1.0.0"
 description = "LLM application development course"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "flask>=3.1.2",
+]
 
 [dependency-groups]
 dev = [
