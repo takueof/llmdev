@@ -133,7 +133,7 @@ def build_graph(model_name: str, memory):
     return graph_builder.compile(checkpointer=memory)
 
 # ===== グラフを実行する関数 =====
-def stream_graph_updates(graph: compiledstategraph, user_message: str, thread_id):
+def stream_graph_updates(graph: CompiledStateGraph, user_message: str, thread_id):
     """
     ユーザーからのメッセージを元に、グラフを実行し、チャットボットの応答をストリーミングします。
     """
