@@ -1,6 +1,6 @@
 class Authenticator:
     def __init__(self) -> None:
-        self.users = dict[str, str]()  # ユーザー情報を格納（インスタンス変数）
+        self.users = dict[str, str]() # ユーザー情報を格納（インスタンス変数）
 
     # ユーザーの登録
     def register(self, username: str, password: str) -> None:
