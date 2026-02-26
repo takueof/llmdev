@@ -51,11 +51,11 @@ module = "sqlalchemy.*"
 ignore_missing_imports = true
 
 [tool.pyright]
-include = ["06_test", "09_flask", "16_llmapp"]
+include = ["main.py", "06_test", "09_flask", "16_llmapp"]
 exclude = ["**/node_modules", "**/__pycache__"]
 pythonVersion = "3.12"
 typeCheckingMode = "strict"
 reportMissingTypeStubs = "warning"
 
 [tool.ty.src]
-include = ["06_test", "09_flask", "16_llmapp"]
+include = ["main.py", "06_test", "09_flask", "16_llmapp"]
