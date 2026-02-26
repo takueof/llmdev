@@ -30,8 +30,32 @@ dev = [
     "debugpy>=1.8.20",
     "ipykernel<7",
     "jupyter<=1.1.1",
+    "mypy>=1.19.1",
     "pyright>=1.1.408",
     "pytest>=9.0.2",
     "ruff>=0.15.1",
     "ruff-lsp>=0.0.62",
+    "ty>=0.0.18",
 ]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = false
+
+[[tool.mypy.overrides]]
+module = "sqlalchemy.*"
+ignore_missing_imports = true
+
+[tool.pyright]
+include = ["06_test", "09_flask", "16_llmapp"]
+exclude = ["**/node_modules", "**/__pycache__"]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+reportMissingTypeStubs = "warning"
+
+[tool.ty.src]
+include = ["06_test", "09_flask", "16_llmapp"]
