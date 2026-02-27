@@ -38,24 +38,36 @@ dev = [
     "ty>=0.0.18",
 ]
 
+[tool.ruff]
+src = [".", "06_test", "09_flask", "16_llmapp"]
+
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
+quote-style = "single"
+
+[tool.ruff.lint]
+ignore = ["COM812", "COM819", "D206", "D300", "E111", "E114", "E117", "E501", "ISC002", "Q000", "Q001", "Q002", "Q003", "Q004", "W191"]
+select = ["B", "E", "F", "I", "SIM", "UP"]
+
 [tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = false
 python_version = "3.12"
 strict = true
 warn_return_any = true
 warn_unused_configs = true
-disallow_untyped_defs = true
-ignore_missing_imports = false
 
 [[tool.mypy.overrides]]
-module = "sqlalchemy.*"
 ignore_missing_imports = true
+module = "sqlalchemy.*"
 
 [tool.pyright]
-include = ["main.py", "06_test", "09_flask", "16_llmapp"]
 exclude = ["**/node_modules", "**/__pycache__"]
+include = ["main.py", "06_test", "09_flask", "16_llmapp"]
 pythonVersion = "3.12"
-typeCheckingMode = "strict"
 reportMissingTypeStubs = "warning"
+typeCheckingMode = "strict"
 
 [tool.ty.src]
 include = ["main.py", "06_test", "09_flask", "16_llmapp"]
