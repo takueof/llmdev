@@ -104,7 +104,7 @@ uv run -m ipykernel install --sys-prefix --name python3
 
 ## Type Checking
 
-- `ty` と `pyright` と `mypy` を順番に実行して厳格な型チェックを行う
+- `ty` と `mypy` を順番に実行して厳格な型チェックを行う
 - 対象範囲は @pyproject.toml で設定されている
 
 ## Linting
@@ -136,6 +136,10 @@ uv run -m ipykernel install --sys-prefix --name python3
 ### 型アノテーション
 
 - すべてのコードは `mypy` によるチェックを通らなければならない
+
+### リンティング
+
+- すべてのコードは `ruff check --fix` によるリンティングを通らなければならない
 
 ### コードフォーマット
 
